@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF-ELSE-2</title>
+</head>
+<body>
+    <h1>Cạnh a</h1>
+    <br>
+    <input type="text" id="st1"> 
+    <br>
+    <h1>Cạnh b</h1>
+    <br>
+    <input type="text" id="st2">
+    <br>
+    <h1>Cạnh c</h1>
+    <br>
+    <input type="text" id="st3">
+    <br>
+    <br>
+    <button onclick="tinh()">Tính</button>
+    <script>
+        function tinh(){
+            let a = +document.getElementById('st1'). value;
+            let b = +document.getElementById('st2'). value;
+            let c = +document.getElementById('st3'). value;
+            if (a == b && a == c) {
+                alert(a + ", " + b + ", " + c + " là ba cạnh của một tam giác đều");
+            }
+            else if (a == b || a == c || b == c) {
+                alert(a + ", " + b + ", " + c + " là ba cạnh của một tam giác cân");
+            }
+            else if (a == Math.sqrt(b * b + c * c) || b == Math.sqrt(a * a + c * c) || c == Math.sqrt(a * a + b * b)) {
+                alert(a + ", " + b + ", " + c + " là ba cạnh của một tam giác vuông");
+            }
+            else {
+                alert(a + ", " + b + ", " + c + " là ba cạnh của một tam giác");
+            }
+    </script>
+</body>
+</html>

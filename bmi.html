@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chỉ Số BMI</h1>
+    <input type="text" name="" id="chieucao">
+    <input type="text" name="" id="cannang">
+    <button type="button" onclick="xem()">Xem chỉ số</button><br>
+    <p id="rs">bmi</p>
+    <script>
+        function xem(){
+            let a = document.getElementById("chieucao").value;
+            let b = document.getElementById("cannang").value;
+            let bmi = document.getElementById("bmi")
+            let kq = a / ( b * b )
+            if ( bmi < "16" ){
+                kq = "Gầy Độ 3";
+            } else if ( bmi <= "17" && bmi < "18.5" ){
+                kq = "Gầy Độ 2";
+            }
+        document.getElementById("rs").innerHTML = kq ;
+        }
+        </script>
+</body>
+</html>

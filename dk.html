@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu lệnh Điều Kiện</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("nhập vào cạnh a");
+        let b = +prompt("nhập vào cạnh b");
+        let c = +prompt("nhập vào cạnh c"); 
+        if (a == b && a == c) {
+                alert(a + ", " + b + ", " + c + " là ba cạnh của một tam giác đều");
+            }
+            else if (a == b || a == c || b == c) {
+                alert(a + ", " + b + ", " + c + " là ba cạnh của một tam giác cân");
+            }
+            else if (a == Math.sqrt(b * b + c * c) || b == Math.sqrt(a * a + c * c) || c == Math.sqrt(a * a + b * b)) {
+                alert(a + ", " + b + ", " + c + " là ba cạnh của một tam giác vuông");
+            }
+            else {
+                alert(a + ", " + b + ", " + c + " là ba cạnh của một tam giác");
+    </script>
+</body>
+</html>
